@@ -1,4 +1,4 @@
-TARGET := w1ld.exe
+TARGET := w1ldc.exe
 EXTERN := c
 COMPILER := gcc
 
