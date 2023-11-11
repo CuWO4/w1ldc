@@ -70,6 +70,7 @@ init : | $(TMPDIR) $(DEBUGDIR) .gitignore README.md main.$(EXTERN)
 TESTFILE := test/fibonacci.c
 
 # test command #
+# notice that test command will fail if there is more than one source file #
 .PHONY : test
 test : $(DEBUGDIR)/$(TARGET)
 	$(DEBUGDIR)/$(TARGET) $(TESTFILE)
