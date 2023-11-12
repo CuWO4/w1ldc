@@ -2,7 +2,8 @@ TARGET := w1ldc.exe
 EXTERN := c
 COMPILER := gcc
 
-COMPILE_OPTION := -Wall -O2
+# the virtual machine runs only on 32-bit machine
+COMPILE_OPTION := -Wall -O2 -m32
 # to generate dependent files #
 COMPILE_OPTION_DES := -MMD -MP 
 
@@ -68,6 +69,11 @@ init : | $(TMPDIR) $(DEBUGDIR) .gitignore README.md main.$(EXTERN)
 	@ echo completed!
 
 TESTFILE := test/fibonacci.c
+
+# run command #
+.PHONY : run
+run :
+	$(DEBUGDIR)/$(TARGET) $(TESTFILE)
 
 # test command #
 # notice that test command will fail if there is more than one source file #
