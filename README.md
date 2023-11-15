@@ -4,7 +4,9 @@
 
 ## 教程来源
 
-github: https://github.com/lotabout/write-a-C-interpreter
+最初启发者: https://github.com/rswier/c4
+
+二次教程: https://github.com/lotabout/write-a-C-interpreter
 
 中文版博客: https://lotabout.me/2015/write-a-C-interpreter-0/
 
